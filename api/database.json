@@ -1,5 +1,5 @@
 {
-    "Employee": [
+    "employees": [
         { "id": 1, "name": "Giuseppe Shepherd", "hireDate": "2023-01-10" },
         { "id": 2, "name": "Maria Rossi", "hireDate": "2023-02-15" },
         { "id": 3, "name": "Luca Bianchi", "hireDate": "2023-03-20" },
@@ -11,7 +11,7 @@
         { "id": 9, "name": "Francesco Gallo", "hireDate": "2023-09-10" },
         { "id": 10, "name": "Giulia Esposito", "hireDate": "2023-10-25" }
     ],
-    "Order": [
+    "orders": [
     {
         "id": 1,
         "tableNumber": 4,
@@ -103,7 +103,7 @@
         "order_fulfilled": true
     }
     ],
-    "OrderEmployee": [
+    "orderEmployees": [
         { "id": 1, "orderId": 1, "employeeId": 1, "role": "server" },
         { "id": 2, "orderId": 2, "employeeId": 2, "role": "deliverer" },
         { "id": 3, "orderId": 3, "employeeId": 7, "role": "server" },
@@ -117,7 +117,7 @@
         { "id": 11, "orderId": 9, "employeeId": 9, "role": "server" },
         { "id": 12, "orderId": 10, "employeeId": 1, "role": "deliverer" }
     ],
-    "Pizza": [
+    "pizzas": [
         { "id": 1, "sizeId": 4, "sauceId": 6, "cheeseId": 4 },
         { "id": 2, "sizeId": 2, "sauceId": 1, "cheeseId": 10 },
         { "id": 3, "sizeId": 4, "sauceId": 6, "cheeseId": 10 },
@@ -134,7 +134,7 @@
         { "id": 14, "sizeId": 4, "sauceId": 6, "cheeseId": 2 },
         { "id": 15, "sizeId": 1, "sauceId": 3, "cheeseId": 3 }
     ],
-    "OrderPizza": [
+    "orderPizzas": [
         { "id": 1, "orderId": 3, "pizzaId": 3 },
         { "id": 2, "orderId": 3, "pizzaId": 4 },
         { "id": 3, "orderId": 4, "pizzaId": 5 },
@@ -151,7 +151,7 @@
         { "id": 14, "orderId": 10, "pizzaId": 16 },
         { "id": 15, "orderId": 10, "pizzaId": 17 }
       ],
-    "PizzaTopping": [
+    "pizzaToppings": [
         { "id": 1, "pizzaId": 3, "toppingId": 1 },
         { "id": 2, "pizzaId": 3, "toppingId": 6 },
         { "id": 3, "pizzaId": 4, "toppingId": 5 },
@@ -174,7 +174,7 @@
         { "id": 20, "pizzaId": 16, "toppingId": 6 },
         { "id": 21, "pizzaId": 17, "toppingId": 3 }
     ],
-    "Size": [
+    "sizes": [
         { "id": 1, "name": "Kids", "size": 8, "cost": 6.00 },
         { "id": 2, "name": "Small", "size": 10, "cost": 10.00 },
         { "id": 3, "name": "Medium", "size": 14, "cost": 12.50 },
@@ -182,7 +182,7 @@
         { "id": 5, "name": "X Large", "size": 18, "cost": 18.00 }
 
     ],
-    "Topping": [
+    "toppings": [
         { "id": 1, "ingredient": "Pepperoni", "cost": 1.00 },
         { "id": 2, "ingredient": "Mushroom", "cost": 0.75 },
         { "id": 3, "ingredient": "Onion", "cost": 0.50 },
@@ -194,7 +194,7 @@
         { "id": 9, "ingredient": "Spinach", "cost": 0.65 },
         { "id": 10, "ingredient": "Pineapple", "cost": 0.80 }
     ],
-    "Sauce": [
+    "sauces": [
         { "id": 1, "type": "Marinara" },
         { "id": 2, "type": "Diavolo" },
         { "id": 3, "type": "Arrabbiata" },
@@ -206,7 +206,7 @@
         { "id": 9, "type": "BBQ" },
         { "id": 10, "type": "Olive Oil & Garlic" }
     ],
-    "Cheese": [
+    "cheeses": [
         { "id": 1, "type": "Mozzarella" },
         { "id": 2, "type": "Buffalo Mozzarella" },
         { "id": 3, "type": "Four Cheese" },
