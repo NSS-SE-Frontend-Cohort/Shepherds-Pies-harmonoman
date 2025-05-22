@@ -1,0 +1,221 @@
+{
+    "Employee": [
+        { "id": 1, "name": "Giuseppe Shepherd", "hireDate": "2023-01-10" },
+        { "id": 2, "name": "Maria Rossi", "hireDate": "2023-02-15" },
+        { "id": 3, "name": "Luca Bianchi", "hireDate": "2023-03-20" },
+        { "id": 4, "name": "Isabella Conti", "hireDate": "2023-04-18" },
+        { "id": 5, "name": "Marco DeLuca", "hireDate": "2023-05-22" },
+        { "id": 6, "name": "Sofia Romano", "hireDate": "2023-06-30" },
+        { "id": 7, "name": "Antonio Moretti", "hireDate": "2023-07-14" },
+        { "id": 8, "name": "Chiara Greco", "hireDate": "2023-08-02" },
+        { "id": 9, "name": "Francesco Gallo", "hireDate": "2023-09-10" },
+        { "id": 10, "name": "Giulia Esposito", "hireDate": "2023-10-25" }
+    ],
+    "Order": [
+    {
+        "id": 1,
+        "tableNumber": 4,
+        "delivery": false,
+        "address": null,
+        "tip": 5.00,
+        "dateTime": "2025-05-22T18:45:00",
+        "order_fulfilled": false
+    },
+    {
+        "id": 2,
+        "tableNumber": null,
+        "delivery": true,
+        "address": "123 Pizza Lane",
+        "tip": 3.50,
+        "dateTime": "2025-05-22T19:00:00",
+        "order_fulfilled": false
+    },
+    {
+        "id": 3,
+        "tableNumber": 12,
+        "delivery": false,
+        "address": null,
+        "tip": 0.00,
+        "dateTime": "2025-05-21T12:15:00",
+        "order_fulfilled": true
+    },
+    {
+        "id": 4,
+        "tableNumber": null,
+        "delivery": true,
+        "address": "456 Mozzarella Ave",
+        "tip": 10.00,
+        "dateTime": "2025-05-21T13:20:00",
+        "order_fulfilled": true
+    },
+    {
+        "id": 5,
+        "tableNumber": 1,
+        "delivery": false,
+        "address": null,
+        "tip": 2.25,
+        "dateTime": "2025-05-20T17:30:00",
+        "order_fulfilled": false
+    },
+    {
+        "id": 6,
+        "tableNumber": null,
+        "delivery": true,
+        "address": "789 Basil Street",
+        "tip": 0.00,
+        "dateTime": "2025-05-20T21:00:00",
+        "order_fulfilled": false
+    },
+    {
+        "id": 7,
+        "tableNumber": 7,
+        "delivery": false,
+        "address": null,
+        "tip": 7.75,
+        "dateTime": "2025-05-19T20:10:00",
+        "order_fulfilled": true
+    },
+    {
+        "id": 8,
+        "tableNumber": null,
+        "delivery": true,
+        "address": "111 Cheese Blvd Apt 5",
+        "tip": 1.00,
+        "dateTime": "2025-05-18T14:30:00",
+        "order_fulfilled": false
+    },
+    {
+        "id": 9,
+        "tableNumber": 3,
+        "delivery": false,
+        "address": null,
+        "tip": 0.00,
+        "dateTime": "2025-05-22T11:45:00",
+        "order_fulfilled": false
+    },
+    {
+        "id": 10,
+        "tableNumber": null,
+        "delivery": true,
+        "address": "987 Crust Corner",
+        "tip": 20.00,
+        "dateTime": "2025-05-17T16:00:00",
+        "order_fulfilled": true
+    }
+    ],
+    "OrderEmployee": [
+        { "id": 1, "orderId": 1, "employeeId": 1, "role": "server" },
+        { "id": 2, "orderId": 2, "employeeId": 2, "role": "deliverer" },
+        { "id": 3, "orderId": 3, "employeeId": 7, "role": "server" },
+        { "id": 4, "orderId": 4, "employeeId": 8, "role": "deliverer" },
+        { "id": 5, "orderId": 4, "employeeId": 4, "role": "server" },
+        { "id": 6, "orderId": 5, "employeeId": 2, "role": "server" },
+        { "id": 7, "orderId": 6, "employeeId": 8, "role": "deliverer" },
+        { "id": 8, "orderId": 6, "employeeId": 1, "role": "server" },
+        { "id": 9, "orderId": 7, "employeeId": 5, "role": "server" },
+        { "id": 10, "orderId": 8, "employeeId": 4, "role": "deliverer" },
+        { "id": 11, "orderId": 9, "employeeId": 9, "role": "server" },
+        { "id": 12, "orderId": 10, "employeeId": 1, "role": "deliverer" }
+    ],
+    "Pizza": [
+        { "id": 1, "sizeId": 4, "sauceId": 6, "cheeseId": 4 },
+        { "id": 2, "sizeId": 2, "sauceId": 1, "cheeseId": 10 },
+        { "id": 3, "sizeId": 4, "sauceId": 6, "cheeseId": 10 },
+        { "id": 4, "sizeId": 1, "sauceId": 3, "cheeseId": 7 },
+        { "id": 5, "sizeId": 1, "sauceId": 6, "cheeseId": 10 },
+        { "id": 6, "sizeId": 3, "sauceId": 1, "cheeseId": 7 },
+        { "id": 7, "sizeId": 5, "sauceId": 7, "cheeseId": 5 },
+        { "id": 8, "sizeId": 4, "sauceId": 1, "cheeseId": 9 },
+        { "id": 9, "sizeId": 4, "sauceId": 1, "cheeseId": 1 },
+        { "id": 10, "sizeId": 4, "sauceId": 2, "cheeseId": 4 },
+        { "id": 11, "sizeId": 1, "sauceId": 4, "cheeseId": 3 },
+        { "id": 12, "sizeId": 1, "sauceId": 9, "cheeseId": 3 },
+        { "id": 13, "sizeId": 3, "sauceId": 10, "cheeseId": 3 },
+        { "id": 14, "sizeId": 4, "sauceId": 6, "cheeseId": 2 },
+        { "id": 15, "sizeId": 1, "sauceId": 3, "cheeseId": 3 }
+    ],
+    "OrderPizza": [
+        { "id": 1, "orderId": 3, "pizzaId": 3 },
+        { "id": 2, "orderId": 3, "pizzaId": 4 },
+        { "id": 3, "orderId": 4, "pizzaId": 5 },
+        { "id": 4, "orderId": 4, "pizzaId": 6 },
+        { "id": 5, "orderId": 4, "pizzaId": 7 },
+        { "id": 6, "orderId": 5, "pizzaId": 8 },
+        { "id": 7, "orderId": 5, "pizzaId": 9 },
+        { "id": 8, "orderId": 6, "pizzaId": 10 },
+        { "id": 9, "orderId": 6, "pizzaId": 11 },
+        { "id": 10, "orderId": 7, "pizzaId": 12 },
+        { "id": 11, "orderId": 7, "pizzaId": 13 },
+        { "id": 12, "orderId": 8, "pizzaId": 14 },
+        { "id": 13, "orderId": 9, "pizzaId": 15 },
+        { "id": 14, "orderId": 10, "pizzaId": 16 },
+        { "id": 15, "orderId": 10, "pizzaId": 17 }
+      ],
+    "PizzaTopping": [
+        { "id": 1, "pizzaId": 3, "toppingId": 1 },
+        { "id": 2, "pizzaId": 3, "toppingId": 6 },
+        { "id": 3, "pizzaId": 4, "toppingId": 5 },
+        { "id": 4, "pizzaId": 5, "toppingId": 1 },
+        { "id": 5, "pizzaId": 6, "toppingId": 4 },
+        { "id": 6, "pizzaId": 6, "toppingId": 10 },
+        { "id": 7, "pizzaId": 7, "toppingId": 9 },
+        { "id": 8, "pizzaId": 8, "toppingId": 7 },
+        { "id": 9, "pizzaId": 8, "toppingId": 5 },
+        { "id": 10, "pizzaId": 9, "toppingId": 1 },
+        { "id": 11, "pizzaId": 10, "toppingId": 10 },
+        { "id": 12, "pizzaId": 11, "toppingId": 5 },
+        { "id": 13, "pizzaId": 11, "toppingId": 8 },
+        { "id": 14, "pizzaId": 12, "toppingId": 1 },
+        { "id": 15, "pizzaId": 13, "toppingId": 5 },
+        { "id": 16, "pizzaId": 13, "toppingId": 8 },
+        { "id": 17, "pizzaId": 14, "toppingId": 7 },
+        { "id": 18, "pizzaId": 14, "toppingId": 9 },
+        { "id": 19, "pizzaId": 15, "toppingId": 4 },
+        { "id": 20, "pizzaId": 16, "toppingId": 6 },
+        { "id": 21, "pizzaId": 17, "toppingId": 3 }
+    ],
+    "Size": [
+        { "id": 1, "name": "Kids", "size": 8, "cost": 6.00 },
+        { "id": 2, "name": "Small", "size": 10, "cost": 10.00 },
+        { "id": 3, "name": "Medium", "size": 14, "cost": 12.50 },
+        { "id": 4, "name": "Large", "size": 16, "cost": 15.00 },
+        { "id": 5, "name": "X Large", "size": 18, "cost": 18.00 }
+
+    ],
+    "Topping": [
+        { "id": 1, "ingredient": "Pepperoni", "cost": 1.00 },
+        { "id": 2, "ingredient": "Mushroom", "cost": 0.75 },
+        { "id": 3, "ingredient": "Onion", "cost": 0.50 },
+        { "id": 4, "ingredient": "Green pepper", "cost": 0.60 },
+        { "id": 5, "ingredient": "Extra cheese", "cost": 0.90 },
+        { "id": 6, "ingredient": "Sausage", "cost": 1.00 },
+        { "id": 7, "ingredient": "Black olive", "cost": 0.70 },
+        { "id": 8, "ingredient": "Basil", "cost": 0.55 },
+        { "id": 9, "ingredient": "Spinach", "cost": 0.65 },
+        { "id": 10, "ingredient": "Pineapple", "cost": 0.80 }
+    ],
+    "Sauce": [
+        { "id": 1, "type": "Marinara" },
+        { "id": 2, "type": "Diavolo" },
+        { "id": 3, "type": "Arrabbiata" },
+        { "id": 4, "type": "Garlic White" },
+        { "id": 5, "type": "None (sauceless pizza)" },
+        { "id": 6, "type": "Pesto" },
+        { "id": 7, "type": "Alfredo" },
+        { "id": 8, "type": "Spicy Tomato" },
+        { "id": 9, "type": "BBQ" },
+        { "id": 10, "type": "Olive Oil & Garlic" }
+    ],
+    "Cheese": [
+        { "id": 1, "type": "Mozzarella" },
+        { "id": 2, "type": "Buffalo Mozzarella" },
+        { "id": 3, "type": "Four Cheese" },
+        { "id": 4, "type": "Vegan" },
+        { "id": 5, "type": "Ricotta" },
+        { "id": 6, "type": "None (cheeseless)" },
+        { "id": 7, "type": "Parmesan" },
+        { "id": 8, "type": "Goat Cheese" },
+        { "id": 9, "type": "Provolone" },
+        { "id": 10, "type": "Smoked Mozzarella" }
+    ]
+  }
