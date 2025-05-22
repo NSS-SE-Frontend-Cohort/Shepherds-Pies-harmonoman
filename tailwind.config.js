@@ -4,6 +4,7 @@ export default {
     theme: {
       extend: {
         fontFamily: {
+          italianno: ['Italianno', 'cursive'],
           sans: [
             '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen',
             'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
