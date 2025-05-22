@@ -26,7 +26,6 @@ Order {
     boolean delivery
     varchar address_nullable
     float tip
-    float totalCost
     date dateTime
     boolean order_fulfilled
 }
