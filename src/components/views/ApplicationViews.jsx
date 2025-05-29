@@ -2,9 +2,7 @@ import { Outlet, Route, Routes } from "react-router-dom"
 import { Navbar } from "../nav/NavBar"
 import { OrderList } from "../orders/OrderList"
 
-
 export const ApplicationViews = () => {
-
 
     return (
         <Routes>
@@ -21,5 +19,4 @@ export const ApplicationViews = () => {
             </Route>
         </Routes>
     )
-
 }
