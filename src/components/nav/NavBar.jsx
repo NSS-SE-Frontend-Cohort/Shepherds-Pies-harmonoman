@@ -36,7 +36,6 @@ export const Navbar = () => {
                     Logout
                 </Link>
             </li>
-
         </ul>
     )
 }
