@@ -26,8 +26,8 @@ Order {
     boolean delivery
     varchar address_nullable
     float tip
-    date dateTime
-    boolean order_fulfilled
+    date dateTimePlaced
+    date dateTimeFulfilled
 }
 
 OrderEmployee {

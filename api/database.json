@@ -12,110 +12,113 @@
         { "id": 10, "name": "Giulia Esposito", "hireDate": "2023-10-25" }
     ],
     "orders": [
-    {
-        "id": 1,
-        "tableNumber": 4,
-        "delivery": false,
-        "address": null,
-        "tip": 5.00,
-        "dateTime": "2025-05-22T18:45:00",
-        "order_fulfilled": false
-    },
-    {
-        "id": 2,
-        "tableNumber": null,
-        "delivery": true,
-        "address": "123 Pizza Lane",
-        "tip": 3.50,
-        "dateTime": "2025-05-22T19:00:00",
-        "order_fulfilled": false
-    },
-    {
-        "id": 3,
-        "tableNumber": 12,
-        "delivery": false,
-        "address": null,
-        "tip": 0.00,
-        "dateTime": "2025-05-21T12:15:00",
-        "order_fulfilled": true
-    },
-    {
-        "id": 4,
-        "tableNumber": null,
-        "delivery": true,
-        "address": "456 Mozzarella Ave",
-        "tip": 10.00,
-        "dateTime": "2025-05-21T13:20:00",
-        "order_fulfilled": true
-    },
-    {
-        "id": 5,
-        "tableNumber": 1,
-        "delivery": false,
-        "address": null,
-        "tip": 2.25,
-        "dateTime": "2025-05-20T17:30:00",
-        "order_fulfilled": false
-    },
-    {
-        "id": 6,
-        "tableNumber": null,
-        "delivery": true,
-        "address": "789 Basil Street",
-        "tip": 0.00,
-        "dateTime": "2025-05-20T21:00:00",
-        "order_fulfilled": false
-    },
-    {
-        "id": 7,
-        "tableNumber": 7,
-        "delivery": false,
-        "address": null,
-        "tip": 7.75,
-        "dateTime": "2025-05-19T20:10:00",
-        "order_fulfilled": true
-    },
-    {
-        "id": 8,
-        "tableNumber": null,
-        "delivery": true,
-        "address": "111 Cheese Blvd Apt 5",
-        "tip": 1.00,
-        "dateTime": "2025-05-18T14:30:00",
-        "order_fulfilled": false
-    },
-    {
-        "id": 9,
-        "tableNumber": 3,
-        "delivery": false,
-        "address": null,
-        "tip": 0.00,
-        "dateTime": "2025-05-22T11:45:00",
-        "order_fulfilled": false
-    },
-    {
-        "id": 10,
-        "tableNumber": null,
-        "delivery": true,
-        "address": "987 Crust Corner",
-        "tip": 20.00,
-        "dateTime": "2025-05-17T16:00:00",
-        "order_fulfilled": true
-    }
+        {
+            "id": 1,
+            "tableNumber": null,
+            "delivery": true,
+            "address": "987 Crust Corner",
+            "tip": 20.00,
+            "dateTimePlaced": "2025-05-17T16:00:00",
+            "dateTimeFulfilled": "2025-05-17T16:45:00"
+        },
+        {
+            "id": 2,
+            "tableNumber": null,
+            "delivery": true,
+            "address": "111 Cheese Blvd Apt 5",
+            "tip": 1.00,
+            "dateTimePlaced": "2025-05-18T14:30:00",
+            "dateTimeFulfilled": null
+        },
+        {
+            "id": 3,
+            "tableNumber": 7,
+            "delivery": false,
+            "address": null,
+            "tip": 7.75,
+            "dateTimePlaced": "2025-05-19T20:10:00",
+            "dateTimeFulfilled": "2025-05-19T20:45:00"
+        },
+        {
+            "id": 4,
+            "tableNumber": 1,
+            "delivery": false,
+            "address": null,
+            "tip": 2.25,
+            "dateTimePlaced": "2025-05-20T17:30:00",
+            "dateTimeFulfilled": null
+        },
+        {
+            "id": 5,
+            "tableNumber": null,
+            "delivery": true,
+            "address": "789 Basil Street",
+            "tip": 0.00,
+            "dateTimePlaced": "2025-05-20T21:00:00",
+            "dateTimeFulfilled": null
+        },
+        {
+            "id": 6,
+            "tableNumber": 12,
+            "delivery": false,
+            "address": null,
+            "tip": 0.00,
+            "dateTimePlaced": "2025-05-21T12:15:00",
+            "dateTimeFulfilled": "2025-05-21T12:50:00"
+        },
+        {
+            "id": 7,
+            "tableNumber": null,
+            "delivery": true,
+            "address": "456 Mozzarella Ave",
+            "tip": 10.00,
+            "dateTimePlaced": "2025-05-21T13:20:00",
+            "dateTimeFulfilled": "2025-05-21T14:00:00"
+        },
+        {
+            "id": 8,
+            "tableNumber": 3,
+            "delivery": false,
+            "address": null,
+            "tip": 0.00,
+            "dateTimePlaced": "2025-05-22T11:45:00",
+            "dateTimeFulfilled": null
+        },
+        {
+            "id": 9,
+            "tableNumber": 4,
+            "delivery": false,
+            "address": null,
+            "tip": 5.00,
+            "dateTimePlaced": "2025-05-22T18:45:00",
+            "dateTimeFulfilled": null
+        },
+        {
+            "id": 10,
+            "tableNumber": null,
+            "delivery": true,
+            "address": "123 Pizza Lane",
+            "tip": 3.50,
+            "dateTimePlaced": "2025-05-22T19:00:00",
+            "dateTimeFulfilled": null
+        }
     ],
     "orderEmployees": [
-        { "id": 1, "orderId": 1, "employeeId": 1, "role": "server" },
-        { "id": 2, "orderId": 2, "employeeId": 2, "role": "deliverer" },
-        { "id": 3, "orderId": 3, "employeeId": 7, "role": "server" },
-        { "id": 4, "orderId": 4, "employeeId": 8, "role": "deliverer" },
-        { "id": 5, "orderId": 4, "employeeId": 4, "role": "server" },
-        { "id": 6, "orderId": 5, "employeeId": 2, "role": "server" },
-        { "id": 7, "orderId": 6, "employeeId": 8, "role": "deliverer" },
-        { "id": 8, "orderId": 6, "employeeId": 1, "role": "server" },
-        { "id": 9, "orderId": 7, "employeeId": 5, "role": "server" },
-        { "id": 10, "orderId": 8, "employeeId": 4, "role": "deliverer" },
-        { "id": 11, "orderId": 9, "employeeId": 9, "role": "server" },
-        { "id": 12, "orderId": 10, "employeeId": 1, "role": "deliverer" }
+        { "id": 1,  "orderId": 9,  "employeeId": 1, "role": "server" },
+        { "id": 2,  "orderId": 10, "employeeId": 2, "role": "server" },
+        { "id": 3,  "orderId": 10, "employeeId": 3, "role": "deliverer" },
+        { "id": 4,  "orderId": 6,  "employeeId": 7, "role": "server" },
+        { "id": 5,  "orderId": 7,  "employeeId": 4, "role": "server" },
+        { "id": 6,  "orderId": 7,  "employeeId": 8, "role": "deliverer" },
+        { "id": 7,  "orderId": 4,  "employeeId": 2, "role": "server" },
+        { "id": 8,  "orderId": 5,  "employeeId": 1, "role": "server" },
+        { "id": 9,  "orderId": 5,  "employeeId": 8, "role": "deliverer" },
+        { "id": 10, "orderId": 3,  "employeeId": 5, "role": "server" },
+        { "id": 11, "orderId": 2,  "employeeId": 6, "role": "server" },
+        { "id": 12, "orderId": 2,  "employeeId": 4, "role": "deliverer" },
+        { "id": 13, "orderId": 8,  "employeeId": 9, "role": "server" },
+        { "id": 14, "orderId": 1,  "employeeId": 3, "role": "server" },
+        { "id": 15, "orderId": 1,  "employeeId": 1, "role": "deliverer" }
     ],
     "pizzas": [
         { "id": 1, "sizeId": 4, "sauceId": 6, "cheeseId": 4 },
