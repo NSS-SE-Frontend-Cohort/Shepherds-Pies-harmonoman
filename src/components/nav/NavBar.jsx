@@ -1,9 +1,12 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+// import "./Navbar.css";
 
 export const Navbar = () => {
+    const navigate = useNavigate();
+
 
     return (
-        <ul className="flex flex-wrap md:flex-nowrap justify-between navbar items-center bg-gradient-to-r from-green-600 via-white to-red-600 p-4 shadow-md rounded-b-xl">
+        <ul className="flex flex-wrap md:flex-nowrap justify-between navbar items-center bg-gradient-to-r from-green-300 via-white to-red-300 p-4 shadow-md ">
             <li className="navbar-item">
                 <Link 
                     to="/" 
@@ -28,14 +31,22 @@ export const Navbar = () => {
                     Toppings
                 </Link>
             </li>
-            <li className="navbar-item">
-                <Link 
-                    to="/logout" 
-                    className="navbar-link text-xl font-serif italic text-black hover:text-red-800 transition duration-200"
-                >
-                    Logout
-                </Link>
-            </li>
+            {localStorage.getItem("shepherds_user") ? (
+                <li className="navbar-item navbar-logout">
+                    <Link 
+                        to="" 
+                        className="navbar-link text-xl font-serif italic text-black hover:text-red-800 transition duration-200"
+                        onClick={() => {
+                            localStorage.removeItem("shepherds_user")
+                            navigate("/login", { replace: true })
+                        }}
+                    >
+                        Logout
+                    </Link>
+                </li>
+            ) : ( 
+                ""
+            )}
         </ul>
     )
 }
