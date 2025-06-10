@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Order = ({ order, allOrderEmployees }) => {
     const [server, setServer] = useState("");
@@ -15,7 +16,9 @@ export const Order = ({ order, allOrderEmployees }) => {
             <section className="bg-white p-6 rounded-[10px] w-full">
                 <div className="flex flex-wrap md:flex-nowrap items-center justify-between text-gray-700 gap-4">
                     <h2 className="text-2xl font-bold">
-                        Order # {order.id}
+                        <Link to={`/orders/${order.id}`} className="hover:text-blue-600">
+                            Order # {order.id}
+                        </Link> 
                     </h2>
                     <p className="text-lg">{server}</p>
 
