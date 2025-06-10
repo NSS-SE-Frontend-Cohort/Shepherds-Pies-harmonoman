@@ -1,12 +1,10 @@
 import { Link, useNavigate } from "react-router-dom"
-// import "./Navbar.css";
 
 export const Navbar = () => {
     const navigate = useNavigate();
 
-
     return (
-        <ul className="flex flex-wrap md:flex-nowrap justify-between navbar items-center bg-gradient-to-r from-green-300 via-white to-red-300 p-4 shadow-md ">
+        <ul className="flex flex-wrap md:flex-nowrap justify-between navbar items-center bg-gradient-to-r from-green-300 via-white to-red-300 p-4 shadow-md">
             <li className="navbar-item">
                 <Link 
                     to="/" 

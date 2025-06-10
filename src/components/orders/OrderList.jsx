@@ -14,7 +14,7 @@ export const OrderList = () => {
     const [searchOrderNum, setSearchOrderNum] = useState("");
     const [selectedEmployeeId, setSelectedEmployeeId] = useState(0);
     const [filterDateTime, setFilterDateTime] = useState("");
-    
+
     // Fetch allOrders and allOrderEmployees 
     useEffect(() => {
         getAllOrders().then((ordersArray) => {
@@ -57,7 +57,7 @@ export const OrderList = () => {
         if (filterDateTime !== "") {
             const selectedDateStr = filterDateTime;
             ordersToFilter = ordersToFilter.filter(order => {
-                const orderDateStr = new Date(order.dateTimePlaced).toLocaleDateString('en-CA');
+                const orderDateStr = new Date(order?.dateTimePlaced).toLocaleDateString('en-CA');
                 return orderDateStr === selectedDateStr;
             });
         }
@@ -87,6 +87,10 @@ export const OrderList = () => {
         setResetSignal(prev => !prev); // toggles and triggers reset in child
     };
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <main className="min-h-screen flex items-center justify-center bg-gradient-to-r from-green-300 via-white to-red-300 p-4">
             <div className="flex flex-col px-4 py-8">
@@ -94,7 +98,7 @@ export const OrderList = () => {
                 
                     {/* Centered Header */}
                     <div className="flex justify-center">
-                        <div className="font-italianno text-6xl text-red-700 bg-gradient-to-r from-green-500 via-white to-red-500 font-bold p-10 text-center shadow-xl rounded-xl border-4 border-white">
+                        <div className="font-italianno italic text-6xl text-red-700 bg-gradient-to-r from-green-500 via-white to-red-500 font-bold p-10 text-center shadow-xl rounded-xl border-4 border-white">
                             Shepherd's Pies 🇮🇹
                         </div>
                     </div>
@@ -107,7 +111,7 @@ export const OrderList = () => {
                     </div>
                 
                     {/* Page Title */}
-                    <h1 className="font-italianno text-center text-7xl">Orders</h1>
+                    <h1 className="font-italianno italic text-center text-7xl">Orders</h1>
 
                     {/* Status Filter */}
                     <div className="flex justify-center">
@@ -149,6 +153,7 @@ export const OrderList = () => {
                             <Order order={order} allOrderEmployees={allOrderEmployees} key={order.id} />
                         ))}
                     </div>
+                    
                 </div>
             </div>
         </main>
