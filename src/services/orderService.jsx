@@ -62,3 +62,13 @@ export const deleteFullOrder = async (orderId) => {
         console.error("Failed to delete order and related data:", error);
     }
 }
+
+export const createNewOrder = (order) => {
+    return fetch("http://localhost:8088/orders", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(order),
+    }).then((res) => res.json())
+  }

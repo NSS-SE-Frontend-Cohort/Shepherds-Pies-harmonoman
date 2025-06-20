@@ -15,6 +15,14 @@ export const Navbar = () => {
             </li>
             <li className="navbar-item">
                 <Link 
+                    to="/newOrder" 
+                    className="navbar-link text-xl font-serif italic text-black hover:text-red-800 transition duration-200"
+                >
+                    New Order
+                </Link>
+            </li>
+            <li className="navbar-item">
+                <Link 
                     to="/employees" 
                     className="navbar-link text-xl font-serif italic text-black hover:text-red-800 transition duration-200"
                 >
@@ -29,6 +37,7 @@ export const Navbar = () => {
                     Toppings
                 </Link>
             </li>
+            
             {localStorage.getItem("shepherds_user") ? (
                 <li className="navbar-item navbar-logout">
                     <Link 
