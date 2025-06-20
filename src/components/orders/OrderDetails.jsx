@@ -49,7 +49,7 @@ export const OrderDetails = () => {
         };
       
         fetchAllData();
-      }, [orderId]);
+    }, [orderId]);
 
     // Get and add elements for total order price
     const pizzaSubtotal = pizzas.reduce((acc, pizza) => {
@@ -116,21 +116,30 @@ export const OrderDetails = () => {
                         </h1>
                 ) : (
                     <button 
+                        type="button"
                         className="w-full py-2 px-4 bg-gradient-to-r from-green-600 via-white to-red-600 text-black font-serif text-lg rounded-xl shadow hover:shadow-lg active:translate-y-[2px] transition duration-200"
                         onClick={() => handleOrderFulfilled(orderId)}
                     >
                         Order Fulfilled
                     </button>
                 )}
-
-                {/* Table # */}
-                <h1 className="font-serif  text-left text-2xl">Table #: {orderInfo?.tableNumber || ""}</h1>    
                 
                 {/* Server */}
                 <h1 className="font-serif  text-left text-2xl">Server: {server?.employee?.name || "-"}</h1>
-            
-                {/* Deliverer */}
-                <h1 className="font-serif  text-left text-2xl">Deliverer: {deliverer?.employee?.name || ""}</h1>
+
+                {/* Order Type: Table / Delivery / Takeaway */}
+                {orderInfo?.delivery ? (
+                    <>
+                        <h1 className="font-serif text-left text-2xl">Deliverer: {deliverer?.employee?.name || "-"}</h1>
+                        {orderInfo?.address && (
+                            <h1 className="font-serif text-left text-2xl">Address: {orderInfo.address}</h1>
+                        )}
+                    </>
+                ) : orderInfo?.takeaway ? (
+                    <h1 className="font-serif text-left text-2xl">Take Away</h1>
+                ) : (
+                    <h1 className="font-serif text-left text-2xl">Table #: {orderInfo?.tableNumber || "-"}</h1>
+                )}
             
                 {/* Ordern Details */}
                 <div className="flex justify-between font-serif italic text-2xl font-bold">
@@ -170,6 +179,7 @@ export const OrderDetails = () => {
                 {/* Delete Order */}
                 <div className="flex justify-center">
                     <button 
+                        type="button"
                         className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-xl shadow-md active:translate-y-[2px] transition duration-200"
                         onClick={() => handleDeleteOrder(orderId)}
                     >   

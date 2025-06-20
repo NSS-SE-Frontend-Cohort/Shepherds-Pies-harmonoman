@@ -3,6 +3,7 @@ import { EmployeeDropdown } from "./EmployeeDropdown";
 
 export const OrderSearchFilters = ({ 
     setSearchOrderNum, 
+    employees,
     onEmployeeChange, 
     selectedEmployeeId,
     setFilterDateTime,
@@ -40,10 +41,15 @@ export const OrderSearchFilters = ({
             </div>
 
             {/* Employee Dropdown */}
-            <EmployeeDropdown
-                onEmployeeChange={onEmployeeChange}
-                selectedEmployeeId={selectedEmployeeId}
-            />
+            <div className="w-full p-[2px] bg-gradient-to-r from-green-500 via-white to-red-500 rounded-xl shadow">
+                <div className="bg-white rounded-lg w-64"></div>
+                <EmployeeDropdown
+                    employees={employees}
+                    onEmployeeChange={onEmployeeChange}
+                    selectedEmployeeId={selectedEmployeeId}
+                />
+            </div>
+            
 
             {/* Date Input */}
             <div className={gradientWrapper}>

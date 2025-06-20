@@ -3,9 +3,12 @@ import { getAllOrderEmployees, getAllOrders } from "../../services/orderService"
 import { Order } from "./Order";
 import { OrderStatusTabs } from "../filters/OrderStatusTabs";
 import { OrderSearchFilters } from "../filters/OrderSearchFilters";
+import { useNavigate } from "react-router-dom";
+import { getAllEmployees } from "../../services/employeeService";
 
 export const OrderList = () => {
     
+    const [employees, setEmployees] = useState([]);
     const [allOrders, setAllOrders] = useState([]);
     const [allOrderEmployees, setAllOrderEmployees] = useState([]);
     const [statusFilter, setStatusFilter] = useState("all"); 
@@ -15,10 +18,16 @@ export const OrderList = () => {
     const [selectedEmployeeId, setSelectedEmployeeId] = useState(0);
     const [filterDateTime, setFilterDateTime] = useState("");
 
+    const navigator = useNavigate();
+
     // Fetch allOrders and allOrderEmployees 
     useEffect(() => {
         getAllOrders().then((ordersArray) => {
             setAllOrders(ordersArray);
+        })
+        
+        getAllEmployees().then((employeesArray) => {
+            setEmployees(employeesArray);
         })
 
         getAllOrderEmployees().then((orderEmployeesArray) => {
@@ -75,10 +84,12 @@ export const OrderList = () => {
         filterDateTime
     ])
 
+    // Handle selection of employee
     const handleEmployeeChange = (employeeId) => {
         setSelectedEmployeeId(employeeId);
     }
 
+    // Clear filters
     const clearFilters = () => {
         setStatusFilter("all");
         setSearchOrderNum("");
@@ -87,6 +98,12 @@ export const OrderList = () => {
         setResetSignal(prev => !prev); // toggles and triggers reset in child
     };
 
+    // Navigate to NewOrder view 
+    const handleNewOrder = () => {
+        navigator("/newOrder");
+    }
+
+    // Scroll is always at the top 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -105,39 +122,51 @@ export const OrderList = () => {
 
                     {/* New Order Button */}
                     <div className="flex justify-center">
-                        <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-xl shadow-md active:translate-y-[2px] transition duration-200">
+                        <button 
+                            type="button"
+                            className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-xl shadow-md active:translate-y-[2px] transition duration-200"
+                            onClick={handleNewOrder}
+                        >
                             + New Order
                         </button>
                     </div>
                 
                     {/* Page Title */}
-                    <h1 className="font-italianno italic text-center text-7xl">Orders</h1>
+                    <h1 className="font-italianno italic text-center text-6xl">Orders</h1>
 
                     {/* Status Filter */}
                     <div className="flex justify-center">
-                        <div className="p-[2px] bg-gradient-to-r from-green-500 via-white to-red-500 rounded-xl shadow">
-                            <OrderStatusTabs 
-                                statusFilter={statusFilter} 
-                                setStatusFilter={setStatusFilter} 
-                            />
-                        </div>
+                        <fieldset className="w-full max-w-xs">
+                            <legend className="sr-only">Filter orders by status</legend>
+                            <div className="p-[2px] bg-gradient-to-r from-green-500 via-white to-red-500 rounded-xl shadow">
+                                <OrderStatusTabs 
+                                    statusFilter={statusFilter} 
+                                    setStatusFilter={setStatusFilter} 
+                                />
+                            </div>
+                        </fieldset>
                     </div>
 
                     {/* Filter Fields */}
                     <div className="flex justify-center">
-                        <OrderSearchFilters
-                            setSearchOrderNum={setSearchOrderNum}
-                            onEmployeeChange={handleEmployeeChange}
-                            selectedEmployeeId={selectedEmployeeId}
-                            filterDateTime={filterDateTime}
-                            setFilterDateTime={setFilterDateTime}
-                            resetSignal={resetSignal}
-                        />
+                        <fieldset className="w-full max-w-3xl">
+                            <legend className="sr-only">Search and filter orders</legend>
+                            <OrderSearchFilters
+                                setSearchOrderNum={setSearchOrderNum}
+                                employees={employees}
+                                onEmployeeChange={handleEmployeeChange}
+                                selectedEmployeeId={selectedEmployeeId}
+                                filterDateTime={filterDateTime}
+                                setFilterDateTime={setFilterDateTime}
+                                resetSignal={resetSignal}
+                            />
+                        </fieldset>
                     </div>
 
                     {/* Clear Filters */}
                     <div className="flex justify-center pt-4">
                         <button
+                            type="button"
                             className="p-[2px] bg-gradient-to-r from-green-500 via-white to-red-500 rounded-xl shadow"
                             onClick={clearFilters}
                         >
