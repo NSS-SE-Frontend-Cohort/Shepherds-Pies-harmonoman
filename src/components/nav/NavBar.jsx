@@ -23,21 +23,22 @@ export const Navbar = () => {
             </li>
             <li className="navbar-item">
                 <Link 
-                    to="/employees" 
-                    className="navbar-link text-xl font-serif italic text-black hover:text-red-800 transition duration-200"
-                >
-                    Employees
-                </Link>
-            </li>
-            <li className="navbar-item">
-                <Link 
                     to="/toppings" 
                     className="navbar-link text-xl font-serif italic text-black hover:text-red-800 transition duration-200"
                 >
                     Toppings
                 </Link>
             </li>
+            <li className="navbar-item">
+                <Link 
+                    to="/employees" 
+                    className="navbar-link text-xl font-serif italic text-black hover:text-red-800 transition duration-200"
+                >
+                    Employees
+                </Link>
+            </li>
             
+        
             {localStorage.getItem("shepherds_user") ? (
                 <li className="navbar-item navbar-logout">
                     <Link 

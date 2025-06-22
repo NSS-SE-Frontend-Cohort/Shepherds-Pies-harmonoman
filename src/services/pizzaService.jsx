@@ -22,10 +22,6 @@ export const getAllCheeses = () => {
     return fetch(`http://localhost:8088/cheeses`).then(res => res.json());
 }
 
-export const getAllToppings = () => {
-    return fetch(`http://localhost:8088/toppings`).then(res => res.json());
-}
-
 export const createPizza = (pizza) => {
     return fetch(`http://localhost:8088/pizzas`, {
         method: "POST",
