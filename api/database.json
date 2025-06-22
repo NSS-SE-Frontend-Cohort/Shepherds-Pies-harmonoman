@@ -161,66 +161,6 @@
       "tip": 3.5,
       "dateTimePlaced": "2025-05-22T19:00:00Z",
       "dateTimeFulfilled": null
-    },
-    {
-      "tableNumber": null,
-      "delivery": false,
-      "address": null,
-      "takeaway": true,
-      "tip": 0.03,
-      "dateTimePlaced": "2025-06-17T09:14:02Z",
-      "dateTimeFulfilled": null,
-      "id": 11
-    },
-    {
-      "tableNumber": null,
-      "delivery": false,
-      "address": null,
-      "takeaway": true,
-      "tip": 0.07,
-      "dateTimePlaced": "2025-06-17T12:00:08Z",
-      "dateTimeFulfilled": null,
-      "id": 12
-    },
-    {
-      "tableNumber": null,
-      "delivery": false,
-      "address": null,
-      "takeaway": true,
-      "tip": 0,
-      "dateTimePlaced": "2025-06-18T09:30:11Z",
-      "dateTimeFulfilled": null,
-      "id": 13
-    },
-    {
-      "tableNumber": null,
-      "delivery": true,
-      "address": "142",
-      "takeaway": false,
-      "tip": 0.05,
-      "dateTimePlaced": "2025-06-18T18:55:32Z",
-      "dateTimeFulfilled": null,
-      "id": 14
-    },
-    {
-      "tableNumber": null,
-      "delivery": false,
-      "address": null,
-      "takeaway": true,
-      "tip": 0.03,
-      "dateTimePlaced": "2025-06-18T18:56:31Z",
-      "dateTimeFulfilled": null,
-      "id": 15
-    },
-    {
-      "tableNumber": null,
-      "delivery": true,
-      "address": "123",
-      "takeaway": false,
-      "tip": 0.18,
-      "dateTimePlaced": "2025-06-20T11:39:09Z",
-      "dateTimeFulfilled": null,
-      "id": 16
     }
   ],
   "orderEmployees": [
@@ -313,54 +253,6 @@
       "orderId": 1,
       "employeeId": 1,
       "role": "deliverer"
-    },
-    {
-      "orderId": 11,
-      "employeeId": 1,
-      "role": "server",
-      "id": 16
-    },
-    {
-      "orderId": 12,
-      "employeeId": 1,
-      "role": "server",
-      "id": 17
-    },
-    {
-      "orderId": 13,
-      "employeeId": 1,
-      "role": "server",
-      "id": 18
-    },
-    {
-      "orderId": 14,
-      "employeeId": 1,
-      "role": "server",
-      "id": 19
-    },
-    {
-      "orderId": 14,
-      "employeeId": 4,
-      "role": "deliverer",
-      "id": 20
-    },
-    {
-      "orderId": 15,
-      "employeeId": 1,
-      "role": "server",
-      "id": 21
-    },
-    {
-      "orderId": 16,
-      "employeeId": 1,
-      "role": "server",
-      "id": 22
-    },
-    {
-      "orderId": 16,
-      "employeeId": 1,
-      "role": "deliverer",
-      "id": 23
     }
   ],
   "pizzas": [
@@ -477,48 +369,6 @@
       "sizeId": 2,
       "sauceId": 3,
       "cheeseId": 6
-    },
-    {
-      "sizeId": 1,
-      "sauceId": 1,
-      "cheeseId": 1,
-      "id": 20
-    },
-    {
-      "sizeId": 2,
-      "sauceId": 2,
-      "cheeseId": 1,
-      "id": 21
-    },
-    {
-      "sizeId": 1,
-      "sauceId": 1,
-      "cheeseId": 1,
-      "id": 22
-    },
-    {
-      "sizeId": 5,
-      "sauceId": 7,
-      "cheeseId": 2,
-      "id": 23
-    },
-    {
-      "sizeId": 1,
-      "sauceId": 2,
-      "cheeseId": 1,
-      "id": 24
-    },
-    {
-      "sizeId": 1,
-      "sauceId": 1,
-      "cheeseId": 1,
-      "id": 25
-    },
-    {
-      "sizeId": 2,
-      "sauceId": 3,
-      "cheeseId": 3,
-      "id": 26
     }
   ],
   "orderPizzas": [
@@ -606,41 +456,6 @@
       "id": 17,
       "orderId": 1,
       "pizzaId": 19
-    },
-    {
-      "orderId": 11,
-      "pizzaId": 20,
-      "id": 18
-    },
-    {
-      "orderId": 12,
-      "pizzaId": 21,
-      "id": 19
-    },
-    {
-      "orderId": 13,
-      "pizzaId": 22,
-      "id": 20
-    },
-    {
-      "orderId": 14,
-      "pizzaId": 23,
-      "id": 21
-    },
-    {
-      "orderId": 15,
-      "pizzaId": 24,
-      "id": 22
-    },
-    {
-      "orderId": 16,
-      "pizzaId": 25,
-      "id": 23
-    },
-    {
-      "orderId": 16,
-      "pizzaId": 26,
-      "id": 24
     }
   ],
   "pizzaToppings": [
@@ -763,81 +578,6 @@
       "id": 24,
       "pizzaId": 19,
       "toppingId": 6
-    },
-    {
-      "pizzaId": 20,
-      "toppingId": 1,
-      "id": 25
-    },
-    {
-      "pizzaId": 20,
-      "toppingId": 2,
-      "id": 26
-    },
-    {
-      "pizzaId": 21,
-      "toppingId": 1,
-      "id": 27
-    },
-    {
-      "pizzaId": 21,
-      "toppingId": 2,
-      "id": 28
-    },
-    {
-      "pizzaId": 22,
-      "toppingId": 1,
-      "id": 29
-    },
-    {
-      "pizzaId": 22,
-      "toppingId": 2,
-      "id": 30
-    },
-    {
-      "pizzaId": 22,
-      "toppingId": 3,
-      "id": 31
-    },
-    {
-      "pizzaId": 23,
-      "toppingId": 2,
-      "id": 32
-    },
-    {
-      "pizzaId": 23,
-      "toppingId": 4,
-      "id": 33
-    },
-    {
-      "pizzaId": 24,
-      "toppingId": 1,
-      "id": 34
-    },
-    {
-      "pizzaId": 25,
-      "toppingId": 1,
-      "id": 35
-    },
-    {
-      "pizzaId": 25,
-      "toppingId": 2,
-      "id": 36
-    },
-    {
-      "pizzaId": 26,
-      "toppingId": 3,
-      "id": 37
-    },
-    {
-      "pizzaId": 26,
-      "toppingId": 5,
-      "id": 38
-    },
-    {
-      "pizzaId": 26,
-      "toppingId": 6,
-      "id": 39
     }
   ],
   "sizes": [
@@ -911,7 +651,7 @@
     {
       "id": 8,
       "ingredient": "Basil",
-      "cost": 0.55
+      "cost": 0.6
     },
     {
       "id": 9,

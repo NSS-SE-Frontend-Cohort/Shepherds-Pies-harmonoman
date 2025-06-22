@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { PizzaModal } from "../pizzas/PizzaModal";
 import { Pizza } from "../pizzas/Pizza";
 import { createNewOrder } from "../../services/orderService";
-import { createOrderPizza, createPizza, createPizzaTopping, getAllCheeses, getAllSauces, getAllSizes, getAllToppings } from "../../services/pizzaService";
+import { createOrderPizza, createPizza, createPizzaTopping, getAllCheeses, getAllSauces, getAllSizes } from "../../services/pizzaService";
+import { getAllToppings } from "../../services/toppingsService";
 import { createOrderEmployee, getAllEmployees } from "../../services/employeeService";
 import { EditPizzaModal } from "../pizzas/EditPizzaModal";
 
@@ -290,7 +291,7 @@ export const NewOrder = () => {
                             onChange={(e) => setDelivery(e.target.checked)}
                             className="form-checkbox h-5 w-5 text-red-600"
                         />
-                        <span>Delivery?</span>
+                        <span>Delivery</span>
                     </label>
 
                     {/* Takeaway Selector */}
@@ -301,7 +302,7 @@ export const NewOrder = () => {
                             onChange={(e) => setTakeaway(e.target.checked)}
                             className="form-checkbox h-5 w-5 text-red-600"
                         />
-                        <span>Take-away?</span>
+                        <span>Take-away</span>
                     </label>
 
                     {delivery ? (
