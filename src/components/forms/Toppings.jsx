@@ -17,7 +17,9 @@ export const Toppings = () => {
     },[]);
 
     // Handle creating a new topping
-    const handleNewTopping = async () => {
+    const handleNewTopping = async (event) => {
+        event.preventDefault();
+
         const newToppingObj = {
             ingredient: toppingName,
             cost: parseFloat(toppingPrice)
@@ -37,10 +39,11 @@ export const Toppings = () => {
     // Handle saving an updated price
     const handleSavePrice = async (toppingId) => {
         const topping = allToppings.find(t => t.id === toppingId);
+
         if (!topping) return;
       
         const price = parseFloat(editedPrice);
-      
+
         try {
             const updateObj = {
                 id: toppingId,
@@ -174,11 +177,13 @@ export const Toppings = () => {
                     {/* Add Button */}
                     <div className="flex justify-center">
                         <button
-                        type="button"
-                        onClick={handleNewTopping}
-                        className={`bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-xl shadow-md transition duration-200 ${
-                            isFormInvalid ? 'opacity-50 cursor-not-allowed' : 'active:translate-y-[2px]'
-                        }`}    >
+                            type="button"
+                            onClick={handleNewTopping}
+                            className={`bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-xl shadow-md transition duration-200 ${
+                                isFormInvalid ? 'opacity-50 cursor-not-allowed' : 'active:translate-y-[2px]'
+                            }`}    
+                            disabled={isFormInvalid}
+                        >
                         Add Topping
                         </button>
                     </div>
