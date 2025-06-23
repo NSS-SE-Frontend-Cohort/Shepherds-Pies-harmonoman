@@ -17,6 +17,7 @@ Pizza    }o--|| Cheese        : has_cheese
 Employee {
     int id pk
     varchar name
+    varchar email
     date hireDate
 }
 
@@ -25,6 +26,7 @@ Order {
     int tableNumber_nullable
     boolean delivery
     varchar address_nullable
+    boolean takeaway
     float tip
     date dateTimePlaced
     date dateTimeFulfilled
